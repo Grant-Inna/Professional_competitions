@@ -38,7 +38,7 @@ $(document).ready(function () {
    if ($('.move__button').length > 0) {
     
       $('.move__button').on( 'click', function() {
-         $('body, html').animate({scrollTop: 0 }, 600); // плавно переходим к блоку
+         $('body, html').animate({scrollTop: 0 }, 600); // плавно переходим наверх
       });
       
    }
