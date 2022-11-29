@@ -7,7 +7,7 @@ $(document).ready(function () {
           $hide = $('.hidden'),
           $arrow = $('.element__more_arrow'),
           $text = $('.element__more_text'),
-          $link = $('.element__link');
+          $link = $('.element__link span');
       $element__more.on('click', openAnswer);
       
       function openAnswer() {

@@ -24,6 +24,9 @@
       
       background: @gradient-line-r;
    });
+   /*.sm-block({
+      margin-top: 1.5rem;
+   });*/
    
    .line_sm,
    .line_full {
@@ -82,12 +85,28 @@
 
 
 .element__link {
-   .m-medium();
+   .m-medium-latin();
    .size-18-32();
+   letter-spacing: 0.02em;
    
    text-align: center;
    color: @color-blue;
    text-decoration: underline;
    
-   display: none;
+   min-height: 32px;
+   
+   .xl-block({
+      margin-top: -15px;
+      margin-bottom: 1rem;
+   });
+   
+   
+   
+   span {
+      display: none;
+   }
+}
+
+.element__link.link_ru{
+   .m-medium();
 }

@@ -1,4 +1,4 @@
-mixin element( id, name, about, who, founders, parties, award, winner, link, extra )
+mixin element( id, name, about, who, founders, parties, award, winner, link, ru, extra )
    .element__holder( id='competition_#{id}' )
       .element__info
          .element__text_holder
@@ -32,6 +32,7 @@ mixin element( id, name, about, who, founders, parties, award, winner, link, ext
             .line_full.hide
          .elemnt__label
             .element__label_image
-            a( href='https://#{link}/' target='_blank' ).element__link #{link}
+            a( href='https://#{link}/' target='_blank' ).element__link( class='#{ru}' )
+               span #{link}
 
 
