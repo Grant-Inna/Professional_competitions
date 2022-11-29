@@ -1,0 +1,60 @@
+.element__holder {
+   .flex();
+   background-color: #ffffff;
+   margin-bottom: 4rem;
+   box-shadow: @shadow;
+   border-radius: 14px;
+   
+   padding: 2.5rem 0 3.2rem 2.5rem;
+   
+   .lg-block({
+      .column-center();
+      padding-top: 0;
+      padding-right: 2.5rem;
+   })
+}
+.element__info {
+   margin-right: 5rem;
+   
+   .lg( margin-right, 0 )
+}
+.element__label_holder {
+   .lg-block({
+      order: -1;
+   })
+}
+
+.element__text_holder > div:not(:last-child),
+.element__more_text {
+   text-shadow: @text-shadow;
+}
+.element__name {
+   .m-regular();
+   .size-48-54();
+   color: @color-black;
+   
+   margin-bottom: 1.6rem; /* 25 */
+}
+.element__about {
+   .m-medium();
+   .size-18-24();
+}
+.element__title {
+   .m-bold();
+   .size-18-28();
+   
+   margin-top: 1.2rem;
+}
+.element__text {
+   .m-medium();
+   .size-18-28();
+}
+
+.element__extra {
+   .m-light();
+   .size-18-28();
+   margin-top: 1rem;
+}
+
+@import "label";
+@import "more";

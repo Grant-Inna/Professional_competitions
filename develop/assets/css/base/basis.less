@@ -1,0 +1,41 @@
+html {
+   font-size: 16px;
+   .md( font-size, 14px );
+   .sm( font-size, 12px );
+}
+body {
+   font-size: 1rem;
+   .sm( font-size, 1.1rem );
+}
+
+#container {
+   position: relative;
+   min-height: 100vh;
+   font-weight: normal;
+   color: @color-text;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+
+   overflow: hidden
+}
+
+.wrapper {
+   .wrapper();
+}
+.row {
+   .row-flex();
+}
+.col {
+   .col();
+}
+
+
+a {
+   display: block;
+   text-decoration: none;
+   cursor: pointer;
+   
+   color: inherit;
+   .tr();
+}

@@ -1,0 +1,104 @@
+.caption__holder {
+   margin-top: 2.8rem;
+   margin-bottom: 6rem;
+   .sm-block({
+      margin-bottom: 8rem;
+   });
+   .xs-block({
+      margin-top: 3.2rem;
+   })
+}
+.caption__content {
+   position: relative;
+   z-index: 6;
+   width: 100%;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+.caption__text {
+   .caption__text();
+   position: relative;
+   z-index: 5;
+   max-width: 75rem; /* 1200 */
+   width: 95%;
+   max-height: 15rem; /* 185 */
+   min-height: 11.5vw;
+   
+   .from(1441px, {
+      width: 100%;
+      min-height: 185px;
+   });
+   .xs-block({
+      width: 100%;
+      min-height: 13vw;
+   })
+}
+@top: -11rem;
+@width: 350px;
+.caption__image {
+   .caption__image();
+   z-index: 4;
+   position: absolute;
+   top: -11rem;
+   right: -2rem;
+   max-width: 40%;
+   width: @width;
+   height: 450px;
+   max-height: 29rem;
+   
+   .from(1441px, {
+      top: -10.3rem;
+      left: calc( 100% - 320px);
+      width: 400px;
+      height: 500px;
+   });
+   .xl-block({
+      right: -3vw;
+      width: 300px;
+   });
+   .sm-block({
+      top: -10rem;
+      right: unset;
+      left: calc( 100% - 14.4rem);
+      width: 15.5rem;
+      height: 300px;
+   });
+   .xs-block({
+      top: unset;
+      left: unset;
+      bottom: calc(3rem - 160px);
+      right: 17vw;
+      height: 160px;
+   })
+   
+}
+@height: 380px;
+@calc: @height/2;
+.caption__book {
+   .caption__book();
+   z-index: 3;
+   position: absolute;
+   bottom: calc(-5rem - @calc);
+   right: 8rem;
+   
+   width: @height + 50px;
+   height: @height;
+   
+   .lg-block({
+      bottom: calc(3rem - 230px);
+      right: 9rem;
+      height: 250px;
+   });
+   .sm-block({
+      bottom: calc(2rem - 180px);
+      right: 9rem;
+      height: 200px;
+   });
+   .xs-block({
+       top: -14.4rem;
+       bottom: unset;
+       right: 3rem;
+       width: 10rem;
+      height: 280px;
+   });
+}

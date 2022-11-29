@@ -1,0 +1,130 @@
+.img() {
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+.svg_data( @place, @name ) {
+   background-image: url("../data/@{place}/@{name}.svg");
+};
+.png_data( @place, @name ) {
+   background-image: url("../data/@{place}/@{name}.png");
+};
+
+.header__logo() {
+   .svg_data( 'logo', 'logo' );
+   .img();
+   background-position: left;
+}
+.caption__text() {
+   .svg_data( 'logo', 'pc_text' );
+   .img();
+   background-position: left;
+}
+.caption__image() {
+   .png_data( 'images', 'top' );
+   .sm-block(
+      .png_data( 'images', 'glory_top' );
+   );
+   .xs-block({
+      .png_data( 'images', 'top' );
+   });
+   .img();
+   background-position: right;
+}
+.caption__book() {
+   .png_data( 'images', 'book_left' );
+   .img();
+   background-position: right;
+}
+
+
+
+.content__holder() {
+   .svg_data( 'bg', 'radial' );
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center top;
+}
+.content__bg_star() {
+   .png_data( 'images', 'star' );
+   background-position: left;
+}
+.content__bg_book() {
+   .png_data( 'images', 'book' );
+   background-position: right;
+   
+}
+.content__bg_arc() {
+   .png_data( 'images', 'arc' );
+   background-position: left;
+   
+}
+.content__bg_circle() {
+   .png_data( 'images', 'circle' );
+   background-position: right;
+   
+}
+.content__bg_glory() {
+   .png_data( 'images', 'glory' );
+   background-position: left;
+   
+}
+
+.content__bg_circle_full() {
+   .png_data( 'images', 'circle_full' );
+   background-position: left;
+   
+}
+.content__bg_book_left() {
+   .png_data( 'images', 'book_left' );
+   background-position: left;
+   
+}
+.content__bg_circle_full_xs() {
+   .png_data( 'images', 'circle_full' );
+   background-position: right;
+   
+}
+
+
+
+.label( @name ) {
+   background-image: url("../images/@{name}.png");
+};
+.competition_year() {
+   .label( 'year' );
+}
+.competition_director() {
+   .label( 'director' );
+}
+.competition_educatior() {
+   .label( 'educatior' );
+}
+.competition_master() {
+   .label( 'master' );
+}
+.competition_psychiatrist() {
+   .label( 'psychiatrist' );
+}
+.competition_special() {
+   .label( 'special' );
+}
+.competition_dop() {
+   .label( 'dop' );
+}
+.competition_human() {
+   .label( 'human' );
+}
+
+
+.footer__minpros() {
+   .svg_data( 'logo', 'minpros' );
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center top;
+}
+.footer__edu() {
+   .svg_data( 'logo', 'eduru' );
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center top;
+}

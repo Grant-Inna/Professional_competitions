@@ -1,0 +1,12 @@
+.icon( @name ) {
+   background-image: url("../data/system/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+}
+.icon__arrow() {
+   .icon('more')
+}
+.icon__move() {
+   .icon( 'to_top' );
+}

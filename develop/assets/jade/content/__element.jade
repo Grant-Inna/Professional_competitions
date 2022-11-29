@@ -1,0 +1,37 @@
+mixin element( id, name, about, who, founders, parties, award, winner, link, extra )
+   .element__holder( id='competition_#{id}' )
+      .element__info
+         .element__text_holder
+            .element__name #{name}
+            .element__about #{about}
+            .hidden
+               .element__title #{who}:
+               .element__text #{founders}
+
+               .element__title Кто может принять участие:
+               .element__text #{parties}
+
+               .element__title Награда:
+               .element__text #{award}
+
+               !{extra}
+
+               .element__title Победитель 2022 года:
+               .element__text #{winner}
+
+            .element__more
+               .element__more_arrow
+               .element__more_text Развернуть
+
+         a( href='https://#{link}/' target='_blank' ).element__button_holder
+            .element__button_text Принять участие
+
+      .element__label_holder
+         .element__label_line
+            .line_sm
+            .line_full.hide
+         .elemnt__label
+            .element__label_image
+            a( href='https://#{link}/' target='_blank' ).element__link #{link}
+
+

@@ -1,0 +1,93 @@
+.element__label_holder {
+   .flex();
+   .justify-between();
+   .items-start();
+   
+   
+   .lg-block({
+      .column-center();
+   })
+}
+.element__label_line {
+   position: relative;
+   width: 8px;
+   height: 100%;
+   border-radius: 2px;
+   
+   
+   .lg-block({
+      order: 2;
+      width: 100%;
+      height: .5rem;
+      
+      margin-bottom: 3rem;
+      
+      background: @gradient-line-r;
+   });
+   
+   .line_sm,
+   .line_full {
+      .absolute();
+      width: 100%;
+      height: 100%;
+      
+      .lg-block({
+          display: none !important
+      })
+   }
+   .line_sm {
+      background: @gradient-line;
+   }
+   .line_full {
+      background: @gradient-line-full;
+   }
+}
+.element__label_image {
+   width: 315px;
+   height: 315px;
+   
+   .img();
+   background-position: right;
+   
+   .sm-block({
+      width: 250px;
+      height: 250px;
+   });
+}
+
+#competition_year .element__label_image {
+   .competition_year();
+}
+#competition_director .element__label_image {
+   .competition_director();
+}
+#competition_educatior .element__label_image {
+   .competition_educatior;
+}
+#competition_master .element__label_image {
+   .competition_master();
+}
+#competition_psychiatrist .element__label_image {
+   .competition_psychiatrist();
+}
+#competition_special .element__label_image {
+   .competition_special();
+}
+#competition_dop .element__label_image {
+   .competition_dop();
+}
+#competition_human .element__label_image {
+   .competition_human();
+}
+
+
+.element__link {
+   .m-medium();
+   .size-18-32();
+   
+   text-align: center;
+   color: @color-blue;
+   text-decoration: underline;
+   
+   display: none;
+}
