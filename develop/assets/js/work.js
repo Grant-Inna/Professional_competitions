@@ -11,17 +11,19 @@ $(document).ready(function () {
       $element__more.on('click', openAnswer);
       
       function openAnswer() {
-         if ($(this).parent().hasClass('open')) {
-            $hide.fadeOut();
-            $(this).parent().removeClass('open');
+         if ($(this).closest('.element__holder').hasClass('open')) {
+            $(this).closest('.element__holder').find($hide).fadeOut();
+            $(this).closest('.element__holder').find($link).fadeOut();
+            $(this).closest('.element__holder').removeClass('open');
             $(this).find($text).html('Развернуть');
             $(this).find($arrow).removeClass('rotate');
             $(this).closest('.element__holder').find('.line_sm').removeClass('hide');
             $(this).closest('.element__holder').find('.line_full').addClass('hide');
          } else {
             $('.open').removeClass('open');
-            $hide.fadeIn();
-            $(this).parent().addClass('open');
+            $(this).closest('.element__holder').find($hide).fadeIn();
+            $(this).closest('.element__holder').find($link).fadeIn();
+            $(this).closest('.element__holder').addClass('open');
             $(this).find($text).html('Свернуть');
             $(this).find($arrow).addClass('rotate');
             $(this).closest('.element__holder').find('.line_full').removeClass('hide');
@@ -33,16 +35,10 @@ $(document).ready(function () {
    
    /* плавный скрол */
    
-   if ($('.move__link').length > 0) {
+   if ($('.move__button').length > 0) {
     
-      $('.move__link').on( 'click', function(event) {
-         
-         event.preventDefault();
-         
-         let top  = $('#container').offset().top;
-         
-         $('body, html').animate({scrollTop: top - 30 }, 700); // плавно переходим к блоку
-   
+      $('.move__button').on( 'click', function() {
+         $('body, html').animate({scrollTop: 0 }, 600); // плавно переходим к блоку
       });
       
    }

@@ -130,7 +130,7 @@ function watch(done){
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);
    gulp.watch( src + 'data/**/*', data);
-   gulp.watch( src + 'js/*', data);
+   gulp.watch( src + 'js/*', js);
    done();
 }
 
@@ -147,6 +147,6 @@ gulp.task('build', build);
 gulp.task('watch', gulp.series(build, watch));
 gulp.task('grid', gulp.parallel(grid));
 gulp.task('grid', gulp.parallel(grid));
-// gulp.task('copyFonts', copyFonts);
+gulp.task('js', js);
 gulp.task('data', data);
 // gulp.task('ie', ie7);
