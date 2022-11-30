@@ -1,20 +1,33 @@
 @import "base/smart-grid";
 .reset();
 
-@import "base/base";
-@import "images";
-@import "buttons/button";
-@import "icons";
-@import "state/hover";
-
-@import "header/h";
-@import "header/caption";
-
-@import "content/list";
-@import "content/element";
-
-@import "footer/f";
-@import "elements/before&after";
-
-
-@import "base/important";
+#pc_container {
+   position: relative;
+   min-height: 100vh;
+   font-weight: normal;
+   color: #424F6A;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   
+   overflow: hidden;
+   max-width: 100vw;
+}
+#pc_container {
+   @import "base/base";
+   @import "images";
+   @import "buttons/button";
+   @import "icons";
+   @import "state/hover";
+   
+   @import "header/h";
+   @import "header/caption";
+   
+   @import "content/list";
+   @import "content/element";
+   
+   @import "footer/f";
+   @import "elements/before&after";
+   
+   @import "state/accodion";
+}

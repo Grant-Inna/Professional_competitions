@@ -11,23 +11,26 @@ $(document).ready(function () {
       $element__more.on('click', openAnswer);
       
       function openAnswer() {
-         if ($(this).closest('.element__holder').hasClass('open')) {
-            $(this).closest('.element__holder').find($hide).slideUp(400); // ради чего всё затевалось - показать скрытое
-            $(this).closest('.element__holder').find($link).fadeOut();
-            $(this).closest('.element__holder').removeClass('open');
-            $(this).find($text).html('Развернуть');
-            $(this).find($arrow).removeClass('rotate');
-            $(this).closest('.element__holder').find('.line_sm').removeClass('hide');
-            $(this).closest('.element__holder').find('.line_full').addClass('hide');
-         } else {
+         let parent = $(this).closest('.element__holder');
+         
+         if (!parent.hasClass('open')) {
+            
             $('.open').removeClass('open');
-            $(this).closest('.element__holder').find($hide).slideDown(400);
-            $(this).closest('.element__holder').find($link).fadeIn();
-            $(this).closest('.element__holder').addClass('open');
+            $hide.slideUp(400);
+            $link.fadeOut();
+            $('.element__holder').removeClass('open');
+            $text.html('Развернуть');
+            
+            parent.find($hide).slideDown(400); // ради чего всё затевалось - показать скрытое
+            parent.find($link).fadeIn();
+            parent.addClass('open');
             $(this).find($text).html('Свернуть');
-            $(this).find($arrow).addClass('rotate');
-            $(this).closest('.element__holder').find('.line_full').removeClass('hide');
-            $(this).closest('.element__holder').find('.line_sm').addClass('hide');
+            
+         } else {
+            parent.find($hide).slideUp(400);
+            parent.find($link).fadeOut();
+            parent.removeClass('open');
+            $(this).find($text).html('Развернуть');
          }
       }
       
