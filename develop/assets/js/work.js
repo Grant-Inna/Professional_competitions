@@ -12,7 +12,7 @@ $(document).ready(function () {
       
       function openAnswer() {
          if ($(this).closest('.element__holder').hasClass('open')) {
-            $(this).closest('.element__holder').find($hide).fadeOut();
+            $(this).closest('.element__holder').find($hide).fadeOut(); // ради чего всё затевалось - показать скрытое
             $(this).closest('.element__holder').find($link).fadeOut();
             $(this).closest('.element__holder').removeClass('open');
             $(this).find($text).html('Развернуть');
