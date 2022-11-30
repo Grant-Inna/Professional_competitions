@@ -18,24 +18,28 @@
 
 
 .caption__text_holder {
-	background: url("../data/bg/bg.jpg");
-   background-position: left;
-   background-size: cover;
-   background-repeat: no-repeat;
 }
 .caption__text {
 	background: #ffffff;
 	display: inline-block;
 }
 .caption__text span {
+   position: relative;
+   z-index: 10;
    .m-extrabold();
    .size-96-92();
    letter-spacing: -0.04em;
     text-transform: uppercase;
-	background: url("../data/bg/bg.jpg");
-   background-position: left 70%;
+   
+	background: linear-gradient(110deg, rgba(81, 162, 255, 0.45) 0%, rgba(146, 134, 255, 0.1) 29.69%), url("../data/bg/bg_filter4.jpg?v=2");
+   background-position: left 98%;
+   //background-position: left 80%; bg_filter
+   //background-position: left 27%; bg_filter2
+   //background-position: left 56%; bg_filter3
+   //background-position: left 18%; bg_filter3
    background-size: cover;
    background-repeat: no-repeat;
+   
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
    -webkit-background-clip: text;
@@ -43,7 +47,7 @@
    background-clip: text;
    text-fill-color: transparent;
    
-   background-color: #9286FF;
+   background-color: @color-blue-4;
 }
 
 
