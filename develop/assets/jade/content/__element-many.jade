@@ -2,25 +2,25 @@ mixin element-many( id, name, about, who, founders, award, winner, link, parties
    .element__holder( id='competition_#{id}' )
       .element__info
          .element__text_holder
-            .element__name #{name}
-            .element__about #{about}
+            .element__name !{name}
+            .element__about !{about}
             .hidden
-               .element__title #{who}:
-               .element__text #{founders}
+               .element__title !{who}:
+               .element__text !{founders}
 
                .element__title Кто может принять участие:
-               .element__text #{parties}
-               .element__text #{parties2}
-               .element__text #{parties3}
-               .element__text #{parties4}
-               .element__text #{parties5}
-               .element__text #{parties6}
+               .element__text !{parties}
+               .element__text !{parties2}
+               .element__text !{parties3}
+               .element__text !{parties4}
+               .element__text !{parties5}
+               .element__text !{parties6}
 
                .element__title Награда:
-               .element__text #{award}
+               .element__text !{award}
 
-               .element__title Победитель 2022 года:
-               .element__text #{winner}
+               .element__title Победитель 2022&nbsp;года:
+               .element__text !{winner}
 
             .element__more
                .element__more_arrow
@@ -36,6 +36,6 @@ mixin element-many( id, name, about, who, founders, award, winner, link, parties
          .elemnt__label
             .element__label_image
             a( href='https://#{link}/' target='_blank' ).element__link
-               span #{link}
+               span !{link}
 
 

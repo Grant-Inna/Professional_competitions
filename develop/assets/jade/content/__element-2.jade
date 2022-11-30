@@ -2,21 +2,21 @@ mixin element-2( id, name, about, founders, parties, award, winner, winner2, lin
    .element__holder( id='competition_#{id}' )
       .element__info
          .element__text_holder
-            .element__name #{name}
-            .element__about #{about}
+            .element__name !{name}
+            .element__about !{about}
             .hidden
                .element__title Организатор:
-               .element__text #{founders}
+               .element__text !{founders}
 
                .element__title Кто может принять участие:
-               .element__text #{parties}
+               .element__text !{parties}
 
                .element__title Награда:
-               .element__text #{award}
+               .element__text !{award}
 
-               .element__title Победитель 2022 года:
-               .element__text #{winner}
-               .element__text #{winner2}
+               .element__title Победитель 2022&nbsp;года:
+               .element__text !{winner}
+               .element__text !{winner2}
 
             .element__more
                .element__more_arrow
@@ -32,6 +32,6 @@ mixin element-2( id, name, about, founders, parties, award, winner, winner2, lin
          .elemnt__label
             .element__label_image
             a( href='https://#{link}/' target='_blank' ).element__link
-               span #{link}
+               span !{link}
 
 
