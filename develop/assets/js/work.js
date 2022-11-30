@@ -12,7 +12,7 @@ $(document).ready(function () {
       
       function openAnswer() {
          if ($(this).closest('.element__holder').hasClass('open')) {
-            $(this).closest('.element__holder').find($hide).fadeOut(); // ради чего всё затевалось - показать скрытое
+            $(this).closest('.element__holder').find($hide).fadeOut(200); // ради чего всё затевалось - показать скрытое
             $(this).closest('.element__holder').find($link).fadeOut();
             $(this).closest('.element__holder').removeClass('open');
             $(this).find($text).html('Развернуть');
@@ -21,7 +21,7 @@ $(document).ready(function () {
             $(this).closest('.element__holder').find('.line_full').addClass('hide');
          } else {
             $('.open').removeClass('open');
-            $(this).closest('.element__holder').find($hide).fadeIn();
+            $(this).closest('.element__holder').find($hide).fadeIn(200);
             $(this).closest('.element__holder').find($link).fadeIn();
             $(this).closest('.element__holder').addClass('open');
             $(this).find($text).html('Свернуть');
